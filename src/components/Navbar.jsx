@@ -1,17 +1,20 @@
 import React from "react";
-import logo from './assets/images/LOGO.png'
-
+import logo from "../assets/images/LOGO.png";
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div>
-        <img src={logo} alt="Logo de Kasa"   className="logo"/>
-      </div>
-      <ul className="nav-links">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">À propos</a></li>
-      </ul>
-    </nav>
+<nav className="navbar">
+  <div className="navbar__header">
+    <div className="navbar__img">
+      <img src={logo} alt="Logo de Kasa" className="logo" />
+    </div>
+
+    <div className="navbar__links">
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+    </div>
+  </div>
+
+</nav>
   );
 };
 

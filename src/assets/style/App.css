@@ -1,42 +1,203 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app {
+  display: flex;
+  flex-direction: column; /* Organise le contenu en colonne */
+  min-height: 100vh; /* Le conteneur prend au moins 100% de la hauteur de l'écran */
+
+}
+.navbar {
+  display: flex;
+  flex-direction: column; /* Place les sections verticalement */
+  /*padding: 10px 20px; /* Espacement autour */
+  color: white; /* Couleur du texte */
+  width: 100%; /* La barre occupe toute la largeur */
+}
+
+.navbar__header {
+  padding-top:45px;
+  display: flex;
+  justify-content: space-between; /* Sépare le logo et les liens */
+  align-items: center; /* Centre verticalement */
+  width: 100%; /* Assure l'alignement sur toute la largeur */
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 210.32px;
+  height: 68px; /* Taille du logo */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar__links {
+  display: flex;
+  gap: 20px; /* Espace entre les liens */
+  justify-content: flex-end; /* Les liens à droite */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar__links a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: black; /* Couleur des liens */
+  font-weight: bold;
+  font-size: 24px; /* Taille du texte */
+  transition: color 0.3s ease; /* Effet au survol */
+  font-family: 'Montserrat', sans-serif;
 }
 
+.navbar__links a:hover {
+  text-decoration:underline;/* Couleur au survol */
+}
+
+.navbar__caroussel {
+  margin-top: 20px; /* Espace entre le carrousel et la barre */
+  width: 100%; /* Occupe toute la largeur */
+  text-align: center; /* Centrer l'image */
+  position: relative; /* Crée un conteneur positionné */
+
+}
+
+.img_caroussel {
+  display: block; /* Retire l'espace blanc sous l'image */
+  width: 100%; /* Image responsive */
+  height: 223px;
+  max-height: 500px; /* Limite la hauteur max */
+}
+.carousel__text {
+  display: flex; /* Utilise Flexbox pour aligner les textes sur la même ligne */
+
+  position: absolute; /* Positionne par rapport au parent .carousel */
+  top: 50%; /* Aligne verticalement au centre */
+  left: 50%; /* Aligne horizontalement au centre */
+  transform: translate(-50%, -50%); /* Centre précisément */
+  color: white; /* Couleur du texte */
+  background-color: rgba(0, 0, 0, 0); /* Fond semi-transparent */
+  padding: 10px 20px; /* Ajoute de l'espace autour du texte */
+  border-radius: 5px; /* Arrondi les coins du texte */
+  font-size: 44px; /* Taille du texte */
+  font-family: 'Montserrat', sans-serif;
+  gap: 20px; /* Ajoute un espace entre les textes */
+
+}
+/*cards*/
+.big-card {
+  background-color: #f6f6f6; /* Couleur de fond */
+  border: 2px solid #ddd; /* Bordure légère */
+  border-radius: 12px; /* Bords arrondis */
+  padding: 20px; /* Espace intérieur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+  margin: 20px auto; /* Centrer la carte */
+  width: 1240px;
+  height: 829px;
+
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet le retour à la ligne */
+  justify-content: space-between; /* Espace égal entre les cartes */
+  gap: 20px; /* Ajoute un espace entre les cartes */
+  padding: 20px;
+ 
+
+}
 .card {
-  padding: 2em;
+ 
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 340px;
+  height: 340px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-10px); /* Légère élévation */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0; /* Coins arrondis en haut */
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.text_logement {
+  font-size: 36px;
+  font-family:'Montserrat', sans-serif;
+  color: rgba(255, 96, 96, 1);
+}
+
+.location {
+  font-size: 18px;
+}
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  background-color: #fff; /* Optionnel : couleur de fond blanche */
+  margin: 0;
+}
+
+.not-found-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 288px;
+  font-weight: bold; /* Si tu veux du gras */
+  color: rgba(255, 96, 96, 1);
+  text-align: center;
+}
+
+
+
+/*footer*/
+.footer {
+  background-color: #282828; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 20px 0; /* Espace intérieur */
+  text-align: center; /* Centre le contenu */
+
+}
+
+.footer__content {
+  max-width: 1200px; /* Largeur maximale */
+  margin: 0 auto; /* Centre horizontalement */
+  padding: 0 20px; /* Espace sur les côtés */
+}
+
+.footer__links {
+  list-style: none; /* Supprime les puces des liens */
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex; /* Affiche les liens sur une ligne */
+  justify-content: center; /* Centre les liens */
+  gap: 15px; /* Espace entre les liens */
+}
+
+.footer__links a {
+  color: white; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement */
+  transition: color 0.3s ease; /* Animation pour le survol */
+}
+
+.footer__links a:hover {
+  color: #fca311; /* Change la couleur au survol */
+}
+
+.logodark {
+  width: 122px;
+  height: 39.44px;
+}
+
+
+.footer__content > p {
+  font-size: 24px;
+
 }
