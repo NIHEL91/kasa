@@ -1,0 +1,243 @@
+@import 'variables';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Prend toute la hauteur de l'écran */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__img {
+
+
+        .img_navbar {
+          display: block;
+          /* Retire l'espace blanc sous l'image */
+          width: 1240px;
+          height: 223px;
+          max-height: 500px;
+          /* Limite la hauteur max */
+        
+      
+      }
+      .text {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Centre précisément */
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 44px;
+        margin-top: 60px;
+
+
+      }
+
+      
+   } 
+    
+   
+  
+
+    /*cards*/
+  
+  
+    .big-card {
+      background-color: rgba(246, 246, 246, 1);
+      border-radius: 25px;
+      padding: 20px;
+      /* Ombre */
+      margin: 20px auto;
+      /* Centrer la carte */
+      width: 1240px;
+
+    
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      /* Permet le retour à la ligne */
+      justify-content: space-between;
+      /* Espace égal entre les cartes */
+      gap: 20px;
+      /* Ajoute un espace entre les cartes */
+      padding: 20px;
+      .card {
+        padding: 20px;
+        width: 340px;
+        height: 340px;
+        text-align: left; /* Aligne le texte à gauche */
+        border-radius: 10px;
+        position: relative; /* Ajouté pour positionner le texte à l'intérieur de la carte */
+        
+    
+        .card-image {        
+
+          width: 340px;
+          height: 340px; /* Ajuste la hauteur de l'image selon ton besoin */
+          border-radius: 10px;
+          object-fit: cover; /* Permet de bien couvrir l'espace de l'image */
+            
+        }
+        .title-card  {
+          position: absolute; /* Positionne le texte sur l'image */
+          top: 80%; /* Centre verticalement */
+          left: 20px; /* Aligne le texte à gauche de l'image avec un petit espace */
+          transform: translateY(-50%); /* Centre précisément sur l'axe vertical */
+          color: white; /* Ajoute la couleur blanche pour mieux contraster avec l'image */
+          font-size: 18px;
+          font-weight: bold;
+          padding: 10px;
+            }
+    
+      }
+
+    }
+  }
+
+   /*logement*/
+
+    .card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+   
+    .notFound {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Prend toute la hauteur de la fenêtre */
+      background-color: #fff;
+      /* Optionnel : couleur de fond blanche */
+      margin: 0;
+    }
+
+    .not-found-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 288px;
+      font-weight: bold;
+      /* Si tu veux du gras */
+      color: rgba(255, 96, 96, 1);
+      text-align: center;
+      
+    }
+.logement {     
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  .image_logement {
+    .img_logement {
+      width: 1240px;
+      height: 415px;
+      border-radius: 25px;
+    }
+    .log {    display: flex
+      ;
+          justify-content: space-between;}
+    .title-logement {
+      font-size: 36px;
+      font-family: 'Montserrat', sans-serif;
+      color: rgba(255, 96, 96, 1);
+    }
+
+    .location {
+      font-size: 18px;
+    }
+    .properties {      
+        display: flex;
+        justify-content:space-between;
+        h2 {
+          font-size: 18px;
+          color:rgba(255, 96, 96, 1);
+        }
+      .img_properties {
+        border-radius: 50%;
+        object-fit: cover; 
+        width: 64px;
+        height: 64px;
+        margin-left: 15px;
+        
+      
+      }
+    }
+    .logement-tags  {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+
+.tags {
+  width: 115px;
+  height: 25px;
+  background-color: rgb(255, 96, 96); 
+  border-radius: 10px;
+
+
+}
+    }
+  }
+
+  .accordion-logement {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 96, 96, 1);
+    transition: background-color 0.3s;
+    border-radius: 10px;
+  }
+    
+  
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }  
+  
+  
+}
+}
+
+/*about*/
+.about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+.about-img {
+.img_background {
+  object-fit: cover;
+  width: 1240px;
+
+}
+}
+.notFound {
+  display: flex;
+  flex-direction: column;
+
+}
+}
+   
+
+
+  
+
+

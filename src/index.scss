@@ -1,0 +1,20 @@
+@import './assets/style/variables';
+
+:root {
+  font-family:'Montserrat', sans-serif;
+  font-weight: 400;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+  height: 100%;  /* Assurez-vous que le body occupe toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column; /* Organise le contenu en colonne */
+
+}
+

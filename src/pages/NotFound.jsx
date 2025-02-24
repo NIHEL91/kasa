@@ -5,11 +5,10 @@ import Footer from '../components/Footer';
 function NotFound() {
   return (
     <div>
-      <Navbar /> 
       <div className='notFound'>
           <h1 className="not-found-text">404</h1>
+          <p className="notfound">Oups! La page que vous demandez n'existe pas.</p>
       </div>
-      <Footer /> 
     </div>
   );
 }

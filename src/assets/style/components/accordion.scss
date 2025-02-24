@@ -1,0 +1,68 @@
+/*accordion*/
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    .accordion-about & {
+      width: 1024px;
+    }
+    
+    .accordion-logement & {
+      gap: 76px;
+      width: 582px;
+    }
+    
+
+
+  
+  .accordion-header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 96, 96, 1);
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    margin:10px;
+  
+  
+  
+  
+  
+  .accordion-title {
+    text-align: left;
+  
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .accordion-icon {
+    text-align: right;//pour pousser l'icone a l'extremité droite 
+    color:white;
+  }
+  
+  }}
+  
+  .accordion-content {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .accordion-content.show {
+    max-height: 500px; /* Assurez-vous que cette valeur soit suffisamment grande pour votre contenu */
+    opacity: 1;
+  }
+  
+  .accordion-content.hide {
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  

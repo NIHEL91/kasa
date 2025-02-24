@@ -1,0 +1,31 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+  }
+  .carousel-image {
+  width: 1240px;
+      height: 415px;
+      border-radius: 25px;
+    }
+
+  
+  button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  

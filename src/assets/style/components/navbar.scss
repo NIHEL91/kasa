@@ -1,0 +1,66 @@
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+
+
+    .navbar__header {
+      padding-top: 45px;
+      display: flex;
+      justify-content: space-between;
+      /* Sépare le logo et les liens */
+      align-items: center;
+      /* Centre verticalement */
+      width: 100%;
+      margin-bottom: 25px;
+
+      /* Assure l'alignement sur toute la largeur */
+      .logo__img {
+        .logo {
+          width: 210.32px;
+          height: 68px;
+          /* Taille du logo */
+        }
+      }
+    }
+
+    .navbar__links {
+      display: flex;
+      gap: 57px;
+      /* Espace entre les liens */
+      justify-content: flex-end;
+
+
+
+      ul {
+        list-style: none;
+        /* Supprime les puces */
+        display: flex;
+        /* Met les éléments sur une seule ligne */
+        padding: 0;
+        /* Supprime les marges par défaut */
+        margin: 0;
+
+        li {
+          margin-right: 57px;
+          /* Espace entre les liens */
+
+          a {
+            text-decoration: none;
+            /* Supprime le soulignement des liens */
+            color: black;
+            font-size: 24px;
+            transition: color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+
+            &:hover {
+              text-decoration: underline;
+
+            }
+          }
+        }
+      }
+    }
+}
