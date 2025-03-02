@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import data from '@data'; // Utilise l'alias défini dans vite.config.js
 import NotFound from './NotFound';
 import Carousel from '../components/Carousel';
+import React from "react";
+import Rating from '../components/Rating';
 function Logement() {
   const { id } = useParams();
 
@@ -17,18 +19,14 @@ function Logement() {
   return (
     <div  className='logement'>
       <div className="image_logement">
-<Carousel/>
-      <div className='next'>
-
-        </div>
-        <div className='previous'>
-
-        </div>
+        <Carousel logement={logement} />
         <div className='log'>
             <h1 className='title-logement'>{logement.title}</h1>
             <div className='properties'>
               <h2>{logement.host.name}</h2> 
               <img src={logement.host.picture} alt="img de properties" className="img_properties" />
+              <Rating rating={4} />
+
             </div>
 
         </div>
@@ -42,7 +40,7 @@ function Logement() {
       </div>
       <div className="accordion-logement">
         <Accordion title="Description" content={logement.description} />
-        <Accordion title="Équipements" content={logement.equipments.join(', ')} />
+        <Accordion title="Équipements" content={logement.equipments} />
       </div>
       
     </div>

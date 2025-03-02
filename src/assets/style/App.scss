@@ -135,11 +135,7 @@
       justify-content: center;
       align-items: center;
   .image_logement {
-    .img_logement {
-      width: 1240px;
-      height: 415px;
-      border-radius: 25px;
-    }
+  
     .log {    display: flex
       ;
           justify-content: space-between;}
@@ -234,6 +230,17 @@
   flex-direction: column;
 
 }
+.properties {
+
+display: flex;
+flex-direction: column;
+
+.star-rating {
+  display: flex;
+  gap:10px;
+  color: rgba(255, 96, 96, 1);
+
+}}
 }
    
 
