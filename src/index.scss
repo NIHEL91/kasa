@@ -11,10 +11,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  margin: 0;
+  margin: 0 auto ;
   height: 100%;  /* Assurez-vous que le body occupe toute la hauteur de l'écran */
+  width: 1240px;
+  justify-content: center; align-items: center; 
   display: flex;
-  flex-direction: column; /* Organise le contenu en colonne */
+  /*flex-direction: column; /* Organise le contenu en colonne */
 
 }
 

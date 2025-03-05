@@ -20,15 +20,16 @@ function Logement() {
     <div  className='logement'>
       <div className="image_logement">
         <Carousel logement={logement} />
+        <div className='info'>
         <div className='log'>
             <h1 className='title-logement'>{logement.title}</h1>
             <div className='properties'>
               <h2>{logement.host.name}</h2> 
               <img src={logement.host.picture} alt="img de properties" className="img_properties" />
-              <Rating rating={4} />
+              <Rating rating={parseFloat(logement.rating)}/>
 
             </div>
-
+        
         </div>
 
         <p className='location'>{logement.location}</p>
@@ -36,11 +37,15 @@ function Logement() {
           {logement.tags.map((tag, index) => (
           <li className='tags' key={index}>{tag}</li>
           ))}
-        </ul>
+        </ul></div>
       </div>
       <div className="accordion-logement">
-        <Accordion title="Description" content={logement.description} />
-        <Accordion title="Équipements" content={logement.equipments} />
+        <Accordion title="Description">
+          <p>{logement.description}</p>
+        </Accordion>
+        <Accordion title="Équipements">
+          <p>{logement.equipments}</p>
+        </Accordion>
       </div>
       
     </div>

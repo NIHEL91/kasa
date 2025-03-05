@@ -1,5 +1,6 @@
 @import 'variables';
-
+* {  padding-inline-start: 0;
+}
 .app {
   display: flex;
   flex-direction: column;
@@ -12,7 +13,7 @@
     align-items: center;
 }
 .navbar__img {
-
+position: relative;
 
         .img_navbar {
           display: block;
@@ -27,9 +28,10 @@
       .text {
         display: flex;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 25%;
+        left: 25%;
+        transform: translateY(-50%); /* Centre précisément sur l'axe vertical */
+
         /* Centre précisément */
         color: white;
         background-color: rgba(0, 0, 0, 0);
@@ -136,7 +138,8 @@
       align-items: center;
   .image_logement {
   
-    .log {    display: flex
+    .log {    
+      display: flex
       ;
           justify-content: space-between;}
     .title-logement {
@@ -171,13 +174,15 @@
         list-style: none;
         color: white;
         font-size: 14px;
-        text-align: center;
 
 .tags {
-  width: 115px;
-  height: 25px;
+  width: 140px;
+  height: 35px;
   background-color: rgb(255, 96, 96); 
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 
 }
