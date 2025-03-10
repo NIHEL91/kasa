@@ -3,7 +3,10 @@
     display: flex;
     flex-direction: column;
     color: white;
-
+    width: 1240px !important;
+      margin: 0 auto; /* Centre le navbar */
+  
+  
 
 
     .navbar__header {
@@ -27,10 +30,8 @@
     }
 
     .navbar__links {
-
-
-
       ul {
+        gap:57px;
         list-style: none;
         /* Supprime les puces */
         display: flex;
@@ -39,8 +40,6 @@
         /* Supprime les marges par défaut */
         margin: 0;
 
-        li {
-          margin-right: 57px;
           /* Espace entre les liens */
 
           a {
@@ -54,7 +53,7 @@
             &:hover {
               text-decoration: underline;
 
-            }
+            
           }
         }
       }

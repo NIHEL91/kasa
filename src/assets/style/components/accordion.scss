@@ -5,6 +5,7 @@
     overflow: hidden;
     .accordion-about & {
       width: 1024px;
+      padding: 10px;
     }
     
     .accordion-logement & {
@@ -57,6 +58,8 @@
   .accordion-content.show {
     max-height: 500px; /* Assurez-vous que cette valeur soit suffisamment grande pour votre contenu */
     opacity: 1;
+    margin-bottom  : 20px;
+    margin-top: 20px;
   }
   
   .accordion-content.hide {

@@ -103,16 +103,17 @@ position: relative;
     }
   }
 
-   /*logement*/
 
     .card p {
       font-size: 1rem;
       color: #666;
     }
 
-   
+   /*found*/
     .notFound {
+
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -120,55 +121,83 @@ position: relative;
       background-color: #fff;
       /* Optionnel : couleur de fond blanche */
       margin: 0;
-    }
-
-    .not-found-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 288px;
-      font-weight: bold;
-      /* Si tu veux du gras */
-      color: rgba(255, 96, 96, 1);
-      text-align: center;
+    
       
+        .not-found-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 288px;
+            font-weight: bold;
+            /* Si tu veux du gras */
+            color: rgba(255, 96, 96, 1);
+            text-align: center;
+            margin:0;
+          }
+        .notfound {
+          color: rgba(255, 96, 96, 1);
+          font-size: 36px;
+        }
+        .lien {
+        color: inherit;
+          font-size: 18px;
+      }
     }
+  /*logement*/
 .logement {     
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      
   .image_logement {
-  
+  .info {
+    .filter {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
     .log {    
-      display: flex
-      ;
-          justify-content: space-between;}
+      display: flex;
+      justify-content: space-between;
+    }
     .title-logement {
       font-size: 36px;
       font-family: 'Montserrat', sans-serif;
       color: rgba(255, 96, 96, 1);
+      margin-bottom: 0;
     }
 
     .location {
       font-size: 18px;
+      margin:0;
     }
     .properties {      
         display: flex;
         justify-content:space-between;
-        h2 {
+          flex-direction: column;
+          margin-top: 19px;
+          h2 {
           font-size: 18px;
           color:rgba(255, 96, 96, 1);
         }
+        .profile_properties {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+
+        
       .img_properties {
         border-radius: 50%;
         object-fit: cover; 
         width: 64px;
         height: 64px;
         margin-left: 15px;
-        
+      }  }
       
-      }
+      
     }
-    .logement-tags  {
+    .logement-tags {
         display: flex;
         gap: 20px;
         list-style: none;
@@ -186,8 +215,8 @@ position: relative;
 
 
 }
-    }
-  }
+    
+  }}
 
   .accordion-logement {
     display: flex;
@@ -211,11 +240,24 @@ position: relative;
     justify-content: space-between;
     color: white;
   }  
+} 
   
-  
-}
 }
 
+.accordion-logement {
+  display: flex;
+  justify-content: space-between;
+  gap: 76px;
+  .accordion-item {
+    margin-bottom: 45px;
+    .show {
+      margin-bottom  : 20px;
+      margin-top: 20px;
+    }
+  
+  }
+}
+}
 /*about*/
 .about {
       display: flex;
@@ -230,24 +272,28 @@ position: relative;
 
 }
 }
-.notFound {
-  display: flex;
-  flex-direction: column;
 
-}
-.properties {
 
-display: flex;
-flex-direction: column;
+
 
 .star-rating {
   display: flex;
   gap:10px;
   color: rgba(255, 96, 96, 1);
+  align-items: center;
+  justify-content: center;
 
-}}
+
 }
-   
+.filled {
+ color: rgba(255, 96, 96, 1);
+
+}
+.empty {
+  color:rgba(227, 227, 227, 1);
+}
+
+}  
 
 
   

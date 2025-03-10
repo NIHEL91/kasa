@@ -22,29 +22,41 @@ function Logement() {
         <Carousel logement={logement} />
         <div className='info'>
         <div className='log'>
+          <div className='title'>
             <h1 className='title-logement'>{logement.title}</h1>
+            <p className='location'>{logement.location}</p>
+          </div>
+
             <div className='properties'>
+              <div className='profile_properties'>
               <h2>{logement.host.name}</h2> 
-              <img src={logement.host.picture} alt="img de properties" className="img_properties" />
-              <Rating rating={parseFloat(logement.rating)}/>
+              <img src={logement.host.picture} alt="img de properties" className="img_properties" /></div>
+              
 
             </div>
         
         </div>
-
-        <p className='location'>{logement.location}</p>
+        <div className='filter'>
         <ul className='logement-tags'>
           {logement.tags.map((tag, index) => (
           <li className='tags' key={index}>{tag}</li>
           ))}
-        </ul></div>
+        </ul>
+        <Rating rating={parseFloat(logement.rating)}/>
+
+        </div>
+        </div>
       </div>
       <div className="accordion-logement">
         <Accordion title="Description">
           <p>{logement.description}</p>
         </Accordion>
         <Accordion title="Équipements">
-          <p>{logement.equipments}</p>
+        <ul>
+          {logement.equipments.map((equipement, index) => (
+            <li key={index}>{equipement}</li>
+          ))}
+        </ul>
         </Accordion>
       </div>
       
