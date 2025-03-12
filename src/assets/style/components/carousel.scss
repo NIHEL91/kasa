@@ -1,12 +1,14 @@
+
+@import "../mixins";  
 .carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include flex-center-row;  
     gap: 10px;
     position: relative;
   }
   .carousel-image {
-  width: 1240px;
+    object-fit: cover;
+
+    width: 1240px;
       height: 415px;
       border-radius: 25px;
     }

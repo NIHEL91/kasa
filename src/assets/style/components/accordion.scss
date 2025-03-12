@@ -1,3 +1,6 @@
+
+@import "../mixins";  
+@import "../variables";
 /*accordion*/
 .accordion-item {
     margin-bottom: 10px;
@@ -22,7 +25,7 @@
     align-items: center;
     padding: 10px;
     cursor: pointer;
-    background-color: rgba(255, 96, 96, 1);
+    background-color: $primary-color;
     transition: background-color 0.3s;
     border-radius: 10px;
   
@@ -59,7 +62,7 @@
     max-height: 500px; /* Assurez-vous que cette valeur soit suffisamment grande pour votre contenu */
     opacity: 1;
     margin-bottom  : 20px;
-    margin-top: 20px;
+    padding-top: 20px;
   }
   
   .accordion-content.hide {

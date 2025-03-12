@@ -1,5 +1,5 @@
 @import './assets/style/variables';
-
+@import './assets/style/mixins';
 :root {
   font-family:'Montserrat', sans-serif;
   font-weight: 400;
@@ -10,13 +10,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
-  margin: 0 auto ;
-  height: 100%;  /* Assurez-vous que le body occupe toute la hauteur de l'écran */
-  width: 1240px;
-  justify-content: center; align-items: center; 
-  display: flex;
-  /*flex-direction: column; /* Organise le contenu en colonne */
+body {  
 
+
+    margin: 0 auto;
+    height: 100%;
+    width: 100%; // Utilisation de 100% pour que le body prenne toute la largeur disponible
+
+
+@media (max-width: 576px) {
+    padding: 10px;
+    width: auto;
+  }
 }
 

@@ -1,3 +1,5 @@
+@import "../variables";  
+@import "../mixins";  
 
 .navbar {
     display: flex;
@@ -24,7 +26,6 @@
         .logo {
           width: 210.32px;
           height: 68px;
-          /* Taille du logo */
         }
       }
     }
@@ -57,5 +58,29 @@
           }
         }
       }
-    }
-}
+    }}
+    @media (max-width: 576px) {
+      .navbar {
+        padding: 10px; /* Ajoute un padding pour aérer la barre de navigation */
+      
+    
+      .navbar__header {
+        padding-top: 10px;
+        margin-bottom: 10px;
+        width: 335px;
+        height: 47px;
+        .logo__img {
+          .logo {
+            width: 145px;
+            height: 47px;
+          }
+  
+      }
+    
+     
+    
+      .navbar__links a {
+        font-size: 12px; /* Réduit la taille de la police des liens */
+      }
+    }}
+  }
