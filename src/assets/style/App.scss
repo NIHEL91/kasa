@@ -21,8 +21,6 @@
   flex-direction: column;
   min-height: 100vh;
   /* Prend toute la hauteur de l'écran */
-  margin: auto;
-  max-width: 1440px;
 
   .home {
     @include flex-center;
@@ -87,8 +85,18 @@
     margin: 20px auto;
     /* Centrer la carte */
     width: 1240px;
+    display: flex;
 
+    @media (max-width: 576px) {
+      padding: 0;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: 0;
+      background-color: inherit;
+      margin: 0;
 
+    }
 
     .card-container {
       display: flex;
@@ -100,6 +108,11 @@
       /* Ajoute un espace entre les cartes */
       padding: 20px;
 
+      @media (max-width: 576px) {
+        gap: 5px;
+        padding: 0;
+      }
+
       .card {
         padding: 20px;
         width: 340px;
@@ -108,37 +121,35 @@
         /* Aligne le texte à gauche */
         border-radius: 10px;
         position: relative;
+
+        @media (max-width: 576px) {
+          width: 335px;
+          height: 255px;
+        }
       }
-        /* Ajouté pour positionner le texte à l'intérieur de la carte */
 
-    .card-image {
-          height: auto;
-          width: 340px;
-          height: 340px;
-          /* Ajuste la hauteur de l'image selon ton besoin */
-          border-radius: 10px;
-          object-fit: cover;
-          position: relative;
+      /* Ajouté pour positionner le texte à l'intérieur de la carte */
 
-          /* Permet de bien couvrir l'espace de l'image */
-          @media (max-width: 576px) {
-
-            width: 335px;
-            height: 255px;
-          }
-    }
-
-    .card-image::before {
+      .card-image {
+       
       
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 50%; /* Ajustez cette valeur selon l'effet désiré */
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-    }
-      
+        width: 340px;
+        height: 340px;
+        /* Ajuste la hauteur de l'image selon ton besoin */
+        border-radius: 10px;
+        object-fit: cover;
+        position: relative;
+        background-size: contain;  /* Au lieu de 'cover' */
+
+        /* Permet de bien couvrir l'espace de l'image */
+        @media (max-width: 576px) {
+
+          width: 335px;
+          height: 255px;
+        }
+      }
+
+
 
       .title-card {
         position: absolute;
@@ -158,74 +169,142 @@
 
     }
 
-  
+
   }
 
-.card p {
-  font-size: 1rem;
-  color: #666;
-}
+  .card p {
+    font-size: 1rem;
+    color: #666;
+  }
 
-/*found*/
-.notFound {
+  /*found*/
+  .notFound {
 
-  @include flex-center;
-  height: 100vh;
-  /* Prend toute la hauteur de la fenêtre */
-  background-color: #fff;
-  /* Optionnel : couleur de fond blanche */
-  margin: 0;
-
-
-  .not-found-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 288px;
-    font-weight: bold;
-    /* Si tu veux du gras */
-    color: $primary-color;
-    text-align: center;
+    @include flex-center;
+    height: 100vh;
+    /* Prend toute la hauteur de la fenêtre */
+    background-color: #fff;
+    /* Optionnel : couleur de fond blanche */
     margin: 0;
-  }
 
-  .notfound {
-    color: $primary-color;
-    font-size: 36px;
-  }
 
-  .lien {
-    color: inherit;
-    font-size: 18px;
-  }
-}
+    .not-found-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 288px;
+      font-weight: bold;
+      /* Si tu veux du gras */
+      color: $primary-color;
+      text-align: center;
+      margin: 0;
 
-/*logement*/
-.logement {
-  @include flex-center;
+      @media (max-width: 576px) {
 
-  .image_logement {
-    .info {
-      .filter {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        font-size: 96px;
+        
       }
+    }
 
-      .log {
-        display: flex;
-        justify-content: space-between;
-      }
+    .notfound {
+      color: $primary-color;
+      font-size: 36px;
 
-      .title-logement {
-        font-size: 36px;
-        font-family: 'Montserrat', sans-serif;
-        color: $primary-color;
-        margin-bottom: 0;
-      }
+      @media (max-width: 576px) {
 
-      .location {
         font-size: 18px;
-        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .lien {
+      color: inherit;
+      font-size: 18px;
+    }
+  }
+
+  /*logement*/
+  .logement {
+    @include flex-center;
+    @media (max-width: 576px) {
+      margin: 20px;
+    }
+
+    .image_logement {
+      @media (max-width: 576px) {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      min-width: 1240px;
+      align-items: center;
+      margin-bottom: 15px;
+      @media (max-width: 576px) {
+        flex-direction: column;
+        width: 100%;
+        justify-content: initial;
+        align-items: initial;
+        min-width: initial;
+                  }
+
+      .title {
+        .title-logement {
+          font-size: 36px;
+          font-family: 'Montserrat', sans-serif;
+          color: $primary-color;
+          margin-bottom: 0;
+
+          @media (max-width: 576px) {
+            font-size: 18px;
+            margin-top: 10px;
+          }
+        }
+
+        .location {
+          font-size: 18px;
+          margin: 0;
+          @media (max-width: 576px) {
+            font-size: 12px;
+          }
+
+        }
+
+        .filter {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          margin-top: 10px;
+
+          .logement-tags {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            color: white;
+            font-size: 14px;
+
+            .tags {
+              width: 140px;
+              height: 35px;
+              background-color: rgb(255, 96, 96);
+              border-radius: 10px;
+              @include flex-center-row;
+              @media (max-width: 576px) {
+font-size: 13px;
+              width: 84px;
+  height: auto;}
+
+
+            }
+
+          }
+
+        }
       }
 
       .properties {
@@ -233,53 +312,56 @@
         justify-content: space-between;
         flex-direction: column;
         margin-top: 19px;
+        @media (max-width: 576px) {
 
+        flex-direction: row-reverse;
+        }
         h2 {
           font-size: 18px;
           color: $primary-color;
+
+          @media (max-width: 576px) {
+
+            font-size: 12px;
+          }
         }
 
+
+
         .profile_properties {
-          @include flex-center-row;
-
-
+          display: flex;
+        
           .img_properties {
             border-radius: 50%;
             object-fit: cover;
             width: 64px;
             height: 64px;
             margin-left: 15px;
+            @media (max-width: 576px) {
+            width: 32px;
+            height: 32px;
+            }
+            h2 {
+              font-size: 12px;
+            }
           }
-        }
-
-
-      }
-
-      .logement-tags {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-        color: white;
-        font-size: 14px;
-
-        .tags {
-          width: 140px;
-          height: 35px;
-          background-color: rgb(255, 96, 96);
-          border-radius: 10px;
-          @include flex-center-row;
 
 
         }
+
+
 
       }
     }
 
     .accordion-logement {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 76px;
-
+      @media (max-width: 576px) {
+flex-direction: column;
+gap:initial;
+      }
       .accordion-header {
         display: flex;
         justify-content: space-between;
@@ -305,9 +387,13 @@
     display: flex;
     justify-content: space-between;
     gap: 76px;
-
+li {            list-style: none;
+}
     .accordion-item {
       margin-bottom: 45px;
+      @media (max-width: 576px) {
+        width: auto;
+        margin-bottom: 20px;      }
 
       .show {
         margin-bottom: 20px;
@@ -316,54 +402,61 @@
 
     }
   }
-}
 
-/*about*/
-.about {
-  @include flex-center;
 
-}
-
-.about-img {
-  .img_background {
-    object-fit: cover;
-    width: 1240px;
+  /*about*/
+  .about {
+    @include flex-center;
 
   }
-}
 
+  .about-img {
+    .img_background {
+      object-fit: cover;
+      width: 1240px;
 
-
-
-.star-rating {
-  @include flex-center-row;
-  gap: 10px;
-  color: $primary-color;
-
-
-}
-
-.filled {
-  color: $primary-color;
-
-}
-
-.empty {
-  color: $background-color;
-}
-
-
-
-/* Media Queries pour les petits écrans */
-@media (max-width: 576px) {
-  .navbar__img {
-    .img_navbar {
-      width: 335px; // L'image de la navbar prend toute la largeur disponible
-      height: 111px;
+      @media (max-width: 576px) {
+        height: 111px;
+        width: 335px;
+        border-radius: 10px;
+      }
 
     }
   }
-}
+
+
+
+
+  .star-rating {
+    @include flex-center-row;
+    gap: 10px;
+    color: $primary-color;
+ 
+
+
+  }
+
+  .filled {
+    color: $primary-color;
+
+  }
+
+  .empty {
+    color: $background-color;
+  }
+
+
+
+  /* Media Queries pour les petits écrans */
+  @media (max-width: 576px) {
+    .navbar__img {
+      .img_navbar {
+        width: 335px; // L'image de la navbar prend toute la largeur disponible
+        height: 111px;
+
+      }
+    }
+  }
 
 
 
@@ -371,63 +464,64 @@
 
 
 
-.not-found-text {
-  font-size: 4rem;
-}
+  .not-found-text {
+    font-size: 4rem;
+  }
 
-.notfound {
-  font-size: 1.5rem;
-}
+  .notfound {
+    font-size: 1.5rem;
+  }
 
-.lien {
-  font-size: 1rem;
-}
+  .lien {
+    font-size: 1rem;
+  }
 
-.title-logement {
-  font-size: 1.5rem;
-}
+  .title-logement {
+    font-size: 36px;
 
-.location {
-  font-size: 1rem;
-}
+    @media (max-width: 576px) {
+      font-size: 18px;
+    }
 
-.properties h2 {
-  font-size: 1rem;
-}
+  }
 
-.img_properties {
-  width: 48px;
-  height: 48px;
-}
+  .location {
+    font-size: 1rem;
+  }
 
-.tags {
-  width: auto;
-  padding: 5px 10px;
-  font-size: 0.875rem;
-}
+  .properties h2 {
+    font-size: 1rem;
+  }
 
-.accordion-logement {
-  gap: 20px;
-}
+  .img_properties {
+    width: 48px;
+    height: 48px;
+  }
 
-.accordion-item {
-  margin-bottom: 20px;
-}
+  .tags {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+  }
 
-.accordion-header {
-  padding: 8px;
-}
+  .accordion-logement {
+    gap: 20px;
+  }
 
-.about {
-  padding: 10px;
-}
+  .accordion-item {
+    margin-bottom: 20px;
+  }
 
-.img_background {
-  width: 100%;
-  height: auto;
-}
+  .accordion-header {
+    padding: 8px;
+  }
 
-.star-rating {
-  gap: 5px;
-}
+  .about {
+    padding: 10px;
+  }
+
+
+  .star-rating {
+    gap: 5px;
+  }
 }

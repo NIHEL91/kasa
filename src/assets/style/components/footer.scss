@@ -6,17 +6,22 @@
     text-align: center;
     margin-top: auto; /* Pousse le footer en bas si le contenu est court */
     width: 100vw;
-   
+    @media (max-width: 576px) {
 
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}
   .footer__content {
     margin: 0 auto;
     padding: 0 20px;
      p {
         font-size: 24px;
-  
+        @media (max-width: 576px) {
+font-size: 12px;
       }
     }
-  
+  }
 
   .logodark {
     width: 122px;

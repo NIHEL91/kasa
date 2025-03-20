@@ -9,6 +9,11 @@
     .accordion-about & {
       width: 1024px;
       padding: 10px;
+      @media (max-width: 576px) {
+
+      width: 335px;
+      height: 30px;
+      }
     }
     
     .accordion-logement & {
@@ -41,6 +46,11 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    @media (max-width: 576px) {
+
+      font-size: 13px;
+      padding: initial;
+    }
   }
   .accordion-icon {
     text-align: right;//pour pousser l'icone a l'extremité droite 
@@ -56,6 +66,7 @@
     background-color: #f9f9f9;
     max-height: 0;
     opacity: 0;
+    
   }
   
   .accordion-content.show {
@@ -69,5 +80,4 @@
     max-height: 0;
     opacity: 0;
   }
-  
   

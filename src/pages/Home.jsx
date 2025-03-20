@@ -4,11 +4,10 @@ import Cards from "../components/Cards";
 import img from "../assets/images/maskGroup.png";
 import { Link } from "react-router-dom";
 import "../assets/style/App.scss";
-import data from '@data'; // Utilise l'alias défini dans vite.config.js
+import data from "@data"; // Utilise l'alias défini dans vite.config.js
 
 function Home() {
-
-
+  
   return (
     <div className="home">
       <div className="navbar__img">
@@ -20,7 +19,8 @@ function Home() {
           {data.map((card) => (
             <Link
               key={card.id}
-              to={`/logement/${card.id}`} className="card-link"
+              to={`/logement/${card.id}`}
+              className="card-link"
             >
               <Cards title={card.title} image={card.cover} />
             </Link>

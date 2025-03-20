@@ -5,9 +5,12 @@
     display: flex;
     flex-direction: column;
     color: white;
-    width: 1240px !important;
+    width: 1240px ;
       margin: 0 auto; /* Centre le navbar */
-  
+      @media (max-width: 576px) {
+
+        width: 335px;
+      }
   
 
 

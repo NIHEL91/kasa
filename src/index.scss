@@ -12,15 +12,9 @@
 }
 body {  
 
-
     margin: 0 auto;
-    height: 100%;
-    width: 100%; // Utilisation de 100% pour que le body prenne toute la largeur disponible
 
 
-@media (max-width: 576px) {
-    padding: 10px;
-    width: auto;
-  }
+
 }
 
