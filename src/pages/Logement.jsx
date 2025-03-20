@@ -34,21 +34,21 @@ function Logement() {
               ))}
             </ul>
           </div>
+        </div>
+        <div className="properties">
+          <div className="profile_properties">
+            <h2>{logement.host.name}</h2>
+            <img
+              src={logement.host.picture}
+              alt="img de properties"
+              className="img_properties"
+            />
           </div>
-          <div className="properties">
-            <div className="profile_properties">
-              <h2>{logement.host.name}</h2>
-              <img
-                src={logement.host.picture}
-                alt="img de properties"
-                className="img_properties"
-              />
-            </div>
-            <div className="rating">
-              <Rating rating={parseFloat(logement.rating)} />
-            </div>
+          <div className="rating">
+            <Rating rating={parseFloat(logement.rating)} />
           </div>
         </div>
+      </div>
       <div className="accordion-logement">
         <Accordion title="Description">
           <p>{logement.description}</p>

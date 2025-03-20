@@ -1,30 +1,32 @@
-
-@import "../mixins";  
+@import "../mixins";
 @import "../variables";
+
 /*accordion*/
 .accordion-item {
-    margin-bottom: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    .accordion-about & {
-      width: 1024px;
-      padding: 10px;
-      @media (max-width: 576px) {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .accordion-about & {
+    width: 1024px;
+    padding: 10px;
+
+    @media (max-width: 576px) {
 
       width: 335px;
       height: 30px;
-      }
     }
-    
-    .accordion-logement & {
-      gap: 76px;
-      width: 582px;
-    }
-    
+  }
+
+  .accordion-logement & {
+    gap: 76px;
+    width: 582px;
+  }
 
 
-  
-  .accordion-header { 
+
+
+  .accordion-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,51 +35,54 @@
     background-color: $primary-color;
     transition: background-color 0.3s;
     border-radius: 10px;
-  
-  
-  
-  
-  
-  .accordion-title {
-    text-align: left;
-  
-    color: white;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    @media (max-width: 576px) {
 
-      font-size: 13px;
-      padding: initial;
+
+
+
+
+    .accordion-title {
+      text-align: left;
+
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      @media (max-width: 576px) {
+
+        font-size: 13px;
+        padding: initial;
+      }
     }
+
+    .accordion-icon {
+      text-align: right; //pour pousser l'icone a l'extremité droite 
+      color: white;
+    }
+
   }
-  .accordion-icon {
-    text-align: right;//pour pousser l'icone a l'extremité droite 
-    color:white;
-  }
-  
-  }}
-  
-  .accordion-content {
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    overflow: hidden;
-    padding: 0 10px;
-    background-color: #f9f9f9;
-    max-height: 0;
-    opacity: 0;
-    
-  }
-  
-  .accordion-content.show {
-    max-height: 500px; /* Assurez-vous que cette valeur soit suffisamment grande pour votre contenu */
-    opacity: 1;
-    margin-bottom  : 20px;
-    padding-top: 20px;
-  }
-  
-  .accordion-content.hide {
-    max-height: 0;
-    opacity: 0;
-  }
-  
+}
+
+.accordion-content {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  padding: 0 10px;
+  background-color: #f9f9f9;
+  max-height: 0;
+  opacity: 0;
+
+}
+
+.accordion-content.show {
+  max-height: 500px;
+  /* Assurez-vous que cette valeur soit suffisamment grande pour votre contenu */
+  opacity: 1;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.accordion-content.hide {
+  max-height: 0;
+  opacity: 0;
+}

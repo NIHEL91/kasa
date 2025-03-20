@@ -1,89 +1,97 @@
-@import "../variables";  
-@import "../mixins";  
+@import "../variables";
+@import "../mixins";
 
 .navbar {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 1240px;
+  margin: 0 auto;
+
+  /* Centre le navbar */
+  @media (max-width: 576px) {
+
+    width: 335px;
+  }
+
+
+
+  .navbar__header {
+    padding-top: 45px;
     display: flex;
-    flex-direction: column;
-    color: white;
-    width: 1240px ;
-      margin: 0 auto; /* Centre le navbar */
-      @media (max-width: 576px) {
+    justify-content: space-between;
+    /* Sépare le logo et les liens */
+    align-items: center;
+    /* Centre verticalement */
+    width: 100%;
+    margin-bottom: 25px;
 
-        width: 335px;
+    /* Assure l'alignement sur toute la largeur */
+    .logo__img {
+      .logo {
+        width: 210.32px;
+        height: 68px;
       }
-  
+    }
+  }
 
-
-    .navbar__header {
-      padding-top: 45px;
+  .navbar__links {
+    ul {
+      gap: 57px;
+      list-style: none;
+      /* Supprime les puces */
       display: flex;
-      justify-content: space-between;
-      /* Sépare le logo et les liens */
-      align-items: center;
-      /* Centre verticalement */
-      width: 100%;
-      margin-bottom: 25px;
+      /* Met les éléments sur une seule ligne */
+      padding: 0;
+      /* Supprime les marges par défaut */
+      margin: 0;
 
-      /* Assure l'alignement sur toute la largeur */
-      .logo__img {
-        .logo {
-          width: 210.32px;
-          height: 68px;
+      /* Espace entre les liens */
+
+      a {
+        text-decoration: none;
+        /* Supprime le soulignement des liens */
+        color: black;
+        font-size: 24px;
+        transition: color 0.3s ease;
+        font-family: 'Montserrat', sans-serif;
+
+        &:hover {
+          text-decoration: underline;
+
+
         }
       }
     }
-
-    .navbar__links {
-      ul {
-        gap:57px;
-        list-style: none;
-        /* Supprime les puces */
-        display: flex;
-        /* Met les éléments sur une seule ligne */
-        padding: 0;
-        /* Supprime les marges par défaut */
-        margin: 0;
-
-          /* Espace entre les liens */
-
-          a {
-            text-decoration: none;
-            /* Supprime le soulignement des liens */
-            color: black;
-            font-size: 24px;
-            transition: color 0.3s ease;
-            font-family: 'Montserrat', sans-serif;
-
-            &:hover {
-              text-decoration: underline;
-
-            
-          }
-        }
-      }
-    }}
-    @media (max-width: 576px) {
-      .navbar {
-        padding: 10px; /* Ajoute un padding pour aérer la barre de navigation */
-      
-    
-      .navbar__header {
-        padding-top: 10px;
-        margin-bottom: 10px;
-        width: 335px;
-        height: 47px;
-        .logo__img {
-          .logo {
-            width: 145px;
-            height: 47px;
-          }
-  
-      }
-    
-     
-    
-      .navbar__links a {
-        font-size: 12px; /* Réduit la taille de la police des liens */
-      }
-    }}
   }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
+    /* Ajoute un padding pour aérer la barre de navigation */
+
+
+    .navbar__header {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      width: 335px;
+      height: 47px;
+
+      .logo__img {
+        .logo {
+          width: 145px;
+          height: 47px;
+        }
+
+      }
+
+
+
+      .navbar__links a {
+        font-size: 12px;
+        /* Réduit la taille de la police des liens */
+      }
+    }
+  }
+}

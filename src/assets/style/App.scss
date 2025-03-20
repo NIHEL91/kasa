@@ -20,15 +20,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Prend toute la hauteur de l'écran */
 
   .home {
     @include flex-center;
   }
-
+//navbar
   .navbar__img {
     position: relative;
-
     .img_navbar {
       display: block;
       /* Retire l'espace blanc sous l'image */
@@ -131,15 +129,13 @@
       /* Ajouté pour positionner le texte à l'intérieur de la carte */
 
       .card-image {
-       
-      
+
         width: 340px;
         height: 340px;
         /* Ajuste la hauteur de l'image selon ton besoin */
         border-radius: 10px;
         object-fit: cover;
         position: relative;
-        background-size: contain;  /* Au lieu de 'cover' */
 
         /* Permet de bien couvrir l'espace de l'image */
         @media (max-width: 576px) {
@@ -200,7 +196,7 @@
       @media (max-width: 576px) {
 
         font-size: 96px;
-        
+
       }
     }
 
@@ -224,6 +220,7 @@
   /*logement*/
   .logement {
     @include flex-center;
+
     @media (max-width: 576px) {
       margin: 20px;
     }
@@ -245,13 +242,14 @@
       min-width: 1240px;
       align-items: center;
       margin-bottom: 15px;
+
       @media (max-width: 576px) {
         flex-direction: column;
         width: 100%;
         justify-content: initial;
         align-items: initial;
         min-width: initial;
-                  }
+      }
 
       .title {
         .title-logement {
@@ -269,6 +267,7 @@
         .location {
           font-size: 18px;
           margin: 0;
+
           @media (max-width: 576px) {
             font-size: 12px;
           }
@@ -294,10 +293,12 @@
               background-color: rgb(255, 96, 96);
               border-radius: 10px;
               @include flex-center-row;
+
               @media (max-width: 576px) {
-font-size: 13px;
-              width: 84px;
-  height: auto;}
+                font-size: 13px;
+                width: 84px;
+                height: auto;
+              }
 
 
             }
@@ -312,10 +313,12 @@ font-size: 13px;
         justify-content: space-between;
         flex-direction: column;
         margin-top: 19px;
+
         @media (max-width: 576px) {
 
-        flex-direction: row-reverse;
+          flex-direction: row-reverse;
         }
+
         h2 {
           font-size: 18px;
           color: $primary-color;
@@ -330,17 +333,19 @@ font-size: 13px;
 
         .profile_properties {
           display: flex;
-        
+
           .img_properties {
             border-radius: 50%;
             object-fit: cover;
             width: 64px;
             height: 64px;
             margin-left: 15px;
+
             @media (max-width: 576px) {
-            width: 32px;
-            height: 32px;
+              width: 32px;
+              height: 32px;
             }
+
             h2 {
               font-size: 12px;
             }
@@ -358,10 +363,14 @@ font-size: 13px;
       display: flex;
       justify-content: center;
       gap: 76px;
+      gap: 20px;
+
+
       @media (max-width: 576px) {
-flex-direction: column;
-gap:initial;
+        flex-direction: column;
+        gap: initial;
       }
+
       .accordion-header {
         display: flex;
         justify-content: space-between;
@@ -387,13 +396,18 @@ gap:initial;
     display: flex;
     justify-content: space-between;
     gap: 76px;
-li {            list-style: none;
-}
+
+    li {
+      list-style: none;
+    }
+
     .accordion-item {
       margin-bottom: 45px;
+
       @media (max-width: 576px) {
         width: auto;
-        margin-bottom: 20px;      }
+        margin-bottom: 20px;
+      }
 
       .show {
         margin-bottom: 20px;
@@ -407,6 +421,8 @@ li {            list-style: none;
   /*about*/
   .about {
     @include flex-center;
+    padding: 10px;
+
 
   }
 
@@ -431,7 +447,9 @@ li {            list-style: none;
     @include flex-center-row;
     gap: 10px;
     color: $primary-color;
- 
+    gap: 5px;
+
+
 
 
   }
@@ -504,9 +522,7 @@ li {            list-style: none;
     font-size: 0.875rem;
   }
 
-  .accordion-logement {
-    gap: 20px;
-  }
+
 
   .accordion-item {
     margin-bottom: 20px;
@@ -516,12 +532,7 @@ li {            list-style: none;
     padding: 8px;
   }
 
-  .about {
-    padding: 10px;
-  }
 
 
-  .star-rating {
-    gap: 5px;
-  }
+ 
 }

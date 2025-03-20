@@ -7,7 +7,6 @@ import "../assets/style/App.scss";
 import data from "@data"; // Utilise l'alias défini dans vite.config.js
 
 function Home() {
-  
   return (
     <div className="home">
       <div className="navbar__img">
